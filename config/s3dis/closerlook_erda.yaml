@@ -1,0 +1,91 @@
+name                            : closerlook_erda
+
+activation                      : relu
+activation_fn                   : relu
+arch_out                        : ['mlp-1-xen', 'pseudo-fout-pmlp2-mom-normdot-w.1']
+architecture                    : ''
+architecture_dims               : [144, 288, 576, 1152, 2304]
+augment_noise                   : 0.001
+augment_rgb_contrast            : ''
+augment_rgb_drop                : 0.8
+augment_rgb_hstrans             : ''
+augment_rgb_noise               : ''
+augment_rgb_trans               : ''
+augment_rotation                : vertical
+augment_scale_anisotropic       : True
+augment_scale_max               : 1.3
+augment_scale_min               : 0.7
+augment_symmetries              : [True, False, False]
+base_learning_rate              : 0.02
+batch_size                      : 4
+batch_size_val                  : 16
+bn_eps                          : 1.e-06
+bn_momentum                     : 0.99
+bottleneck_ratio                : 2
+builder                         : SceneSegModel
+colocate_gradients_with_ops     : False
+cpu_variables                   : False
+data_path                       : Data
+dataset                         : S3DIS
+debug                           : False
+decay_epoch                     : 1
+decay_rate                      : 0.9885531
+density_parameter               : 5.0
+depth                           : 1
+distribute                      : tf_device
+epoch_batch                     : 8
+epoch_steps                     : 500
+first_features_dim              : 72
+first_subsampling_dl            : 0.04
+grad_norm                       : 100
+grad_raise_none                 : True
+in_features                     : 1-rgb-Z
+in_features_dim                 : 5
+in_radius                       : 2.0
+info_gen                        : ''
+init                            : xavier
+kr_sample                       : [0.1, 0.2, 0.4, 0.8]
+kr_sample_up                    : [0.2, 0.4, 0.8, 1.6]
+kr_search                       : [0.1, 0.2, 0.4, 0.8, 1.6]
+learning_rate                   : 0.01
+local_aggreagtion               : pseudo_grid
+loss_weight                     : 
+max_epoch                       : 600
+max_to_keep                     : 10
+mode                            : train-val
+momentum                        : 0.98
+neighborhood_limits             : [26, 31, 38, 41, 39, 29]
+num_classes                     : 13
+num_layers                      : 5
+num_threads                     : 12
+num_votes                       : 20
+optimizer                       : sgd
+print_freq                      : 60
+pseudo_grid                     : 
+    KP_extent               : 1.0
+    KP_influence            : linear
+    convolution_mode        : sum
+    fixed_kernel_points     : center
+    num_kernel_points       : 15
+    output_conv             : False
+
+r_sample                        : [0.08, 0.16, 0.32, 0.64]
+rand_seed                       : 0
+runtime_freq                    : 0
+sample                          : grid
+save_best                       : True
+save_compact                    : True
+save_freq                       : 0
+save_sample                     : False
+save_test                       : False
+saving                          : True
+search                          : radius
+sep_head                        : False
+snap_dir                        : snapshots
+snap_prefix                     : snap
+summary                         : False
+update_freq                     : 10
+val_freq                        : 10
+validation_steps                : 50
+version                         : aligned
+weight_decay                    : 0.001

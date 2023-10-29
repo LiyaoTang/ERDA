@@ -1,0 +1,20 @@
+# settings & caches
+.vscode
+**/*.pyc
+**/__pycache__
+
+ops/**/*.o
+ops/**/*.so
+ops/**/*.egg-info
+ops/**/build
+ops/tf_custom_ops/**/*.pyd
+ops/tf_custom_ops/**/*.egg*
+ops/nearest_neighbors/knn.cpp
+ops/nearest_neighbors/dist
+ops/nearest_neighbors/lib
+
+# miscellaneous & heavy stuff
+*.zip
+Data
+results/
+**/events.out.tfevents*

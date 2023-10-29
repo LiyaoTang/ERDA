@@ -1,0 +1,109 @@
+name                            : weaksup.1%_randla_erda
+weak_supervise                  : '.1%'
+
+activation                      : lrelu
+arch_out                        : ['__output__', 'mlp-1-xen-dp.5-class', 'pseudo-fout-pmlp2-mom-normdot-w.1']
+architecture                    : [
+        unary,
+        __input__,
+        resnetb-lfa,
+        pool-max,
+        resnetb-lfa,
+        pool-max,
+        resnetb-lfa,
+        pool-max,
+        resnetb-lfa,
+        pool-max,
+        resnetb-lfa,
+        pool-max,
+        unary,
+        upsample-nst_concat_2,
+        upsample-nst_concat_2,
+        upsample-nst_concat_2,
+        upsample-nst_concat_2,
+        upsample-nst_concat_2,
+        __output__,
+        mlp-1-xen-dp.5-class,
+        pseudo-fout-pmlp2-mom-normdot-w.1,
+]
+architecture_dims               : [64, 128, 256, 512, 1024, 2048]
+augment_noise                   : 0.001
+augment_rgb_contrast            : ''
+augment_rgb_drop                : 0.8
+augment_rgb_hstrans             : ''
+augment_rgb_noise               : ''
+augment_rgb_trans               : ''
+augment_rotation                : vertical
+augment_scale                   : 0.2
+augment_scale_anisotropic       : True
+augment_symmetries              : [True, True, False]
+batch_size                      : 4
+batch_size_val                  : 12
+bn_eps                          : 1.e-06
+bn_momentum                     : 0.99
+bottleneck_ratio                : 4
+colocate_gradients_with_ops     : False
+conv                            : lfa
+cpu_variables                   : False
+data_gen                        : spatially_regular_weaksup_gen
+data_path                       : Data
+dataset                         : SensatUrban
+debug                           : False
+decay                           : ''
+decay_epoch                     : 1
+decay_rate                      : 0.9885530946569389
+density_parameter               : ''
+depth                           : 1
+distribute                      : tf_device
+drop                            : dp.5
+epoch_batch                     : 4
+epoch_steps                     : 500
+first_features_dim              : 32
+first_subsampling_dl            : 0.2
+grad_norm                       : 100
+grad_raise_none                 : True
+in_features                     : 1rgbxyzZ
+in_points                       : 65536
+in_radius                       : ''
+info_gen                        : ''
+init                            : xavier
+join                            : concat_2
+kr_sample                       : [16, 16, 16, 16, 16]
+kr_sample_up                    : [1, 1, 1, 1, 1]
+kr_search                       : [16, 16, 16, 16, 16, 16]
+lazy_inputs                     : False
+learning_rate                   : 0.01
+loss_weight                     : 
+max_epoch                       : 200
+max_to_keep                     : 10
+mode                            : train-val
+momentum                        : 0.98
+neighborhood_limits             : ''
+noise_init                      : 3.5
+num_classes                     : 13
+num_layers                      : 6
+num_threads                     : 12
+num_votes                       : 20
+optimizer                       : adam
+print_freq                      : 60
+r_sample                        : [4, 4, 4, 4, 2]
+rand_seed                       : 0
+repeat                          : 1
+runtime_freq                    : 0
+sample                          : random
+save_best                       : True
+save_compact                    : True
+save_freq                       : 0
+save_sample                     : False
+save_test                       : False
+saving                          : True
+search                          : knn
+snap_dir                        : snapshots
+snap_prefix                     : snap
+summary                         : False
+up                              : nst
+update_freq                     : 10
+val_freq                        : 1
+validation_split                : 3
+validation_steps                : 100
+weight_decay                    : 0

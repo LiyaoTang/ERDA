@@ -1,0 +1,120 @@
+name                            : pt_erda
+
+activation                      : relu
+architecture                    : [
+        unary,
+        attention_point-softmax-r2,
+        __input__,
+        unary,
+        pool-max,
+        attention_point-softmax-r2,
+        attention_point-softmax-r2,
+        attention_point-softmax-r2,
+        unary,
+        pool-max,
+        attention_point-softmax-r2,
+        attention_point-softmax-r2,
+        attention_point-softmax-r2,
+        attention_point-softmax-r2,
+        unary,
+        pool-max,
+        attention_point-softmax-r2,
+        attention_point-softmax-r2,
+        attention_point-softmax-r2,
+        attention_point-softmax-r2,
+        attention_point-softmax-r2,
+        attention_point-softmax-r2,
+        unary,
+        pool-max,
+        attention_point-softmax-r2,
+        attention_point-softmax-r2,
+        attention_point-softmax-r2,
+        unary,
+        attention_point-softmax-r2,
+        upsample-dist_f-mlp_s-mlp_sum-mlp,
+        attention_point-softmax-r2,
+        upsample-dist_f-mlp_s-mlp_sum-mlp,
+        attention_point-softmax-r2,
+        upsample-dist_f-mlp_s-mlp_sum-mlp,
+        attention_point-softmax-r2,
+        upsample-dist_f-mlp_s-mlp_sum-mlp,
+        attention_point-softmax-r2,
+        __output__,
+        mlp-1-xen,
+        pseudo-fout-pmlp2-mom-Gavg-normdot-w.1,
+]
+architecture_dims               : [64, 128, 256, 512, 1024]
+augment_noise                   : 0.001
+augment_rgb_contrast            : ''
+augment_rgb_drop                : 0.8
+augment_rgb_hstrans             : ''
+augment_rgb_noise               : ''
+augment_rgb_trans               : ''
+augment_rotation                : vertical
+augment_scale_anisotropic       : True
+augment_scale_max               : 1.3
+augment_scale_min               : 0.7
+augment_symmetries              : [True, False, False]
+batch_size                      : 2
+batch_size_val                  : 16
+bn_eps                          : 1.e-06
+bn_momentum                     : 0.99
+colocate_gradients_with_ops     : False
+cpu_variables                   : False
+data_path                       : Data
+dataset                         : S3DIS
+debug                           : False
+decay                           : ''
+decay_epoch                     : [120, 160]
+decay_rate                      : 0.1
+density_parameter               : 5.0
+distribute                      : tf_device
+epoch_batch                     : 16
+epoch_steps                     : 200
+first_features_dim              : 32
+first_subsampling_dl            : 0.04
+grad_norm                       : 100
+grad_raise_none                 : True
+in_features                     : 1-rgb-Z
+in_features_dim                 : 5
+in_points                       : 40960
+in_radius                       : 2.0
+init                            : xavier
+kr_sample                       : [16, 16, 16, 16]
+kr_sample_up                    : [3, 3, 3, 3]
+kr_search                       : [8, 16, 16, 16, 16]
+lazy_inputs                     : True
+learning_rate                   : 0.5
+loss_weight                     : 
+max_epoch                       : 200
+max_to_keep                     : 10
+mode                            : train-val
+momentum                        : 0.9
+neighborhood_limits             : [26, 31, 38, 41, 39, 29]
+noise_init                      : 2
+num_classes                     : 13
+num_layers                      : 5
+num_threads                     : 12
+num_votes                       : 20
+optimizer                       : sgd
+print_freq                      : 60
+r_sample                        : [4, 4, 4, 4]
+rand_seed                       : 2
+repeat                          : [3, 4, 6, 3]
+runtime_freq                    : 0
+sample                          : farthest_gpu
+save_best                       : True
+save_compact                    : True
+save_freq                       : 0
+save_sample                     : False
+save_test                       : False
+saving                          : True
+search                          : knn
+snap_dir                        : snapshots
+snap_prefix                     : snap
+summary                         : False
+update_freq                     : 10
+val_freq                        : 5
+validation_steps                : 100
+version                         : aligned
+weight_decay                    : 0.0001
