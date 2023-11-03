@@ -4,7 +4,7 @@ By Liyao Tang, Zhe Chen, Shanshan Zhao, Chaoyue Wang, and Dacheng Tao
 This is the implementation of our NeurIPS 2023 paper: <br>
 **All Points Matter: Entropy-Regularized Distribution Alignment for Weakly-supervised 3D Segmentation**
 [[arXiv](https://arxiv.org/abs/2305.15832)]
-<!-- [[OpenReview](https://openreview.net/forum?id=utQms7PPx5)] -->
+[[OpenReview](https://openreview.net/forum?id=utQms7PPx5)]
 
 
 ![erda](./imgs/erda.png)
@@ -12,9 +12,9 @@ This is the implementation of our NeurIPS 2023 paper: <br>
 If you find our work useful in your research, please consider citing:
 
 ```
-@inproceedings{tang2023erda,
+@inproceedings{tang2023all,
     title={All Points Matter: Entropy-Regularized Distribution Alignment for Weakly-supervised 3D Segmentation},
-    author={Tang, Liyao and Chen, Zhe and Zhao, Shanshan and Wang, Chaoyue and Tao, Dacheng},
+    author={Liyao Tang and Zhe Chen and Shanshan Zhao and Chaoyue Wang and Dacheng Tao},
     booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
     year={2023},
     url={https://openreview.net/forum?id=utQms7PPx5}
